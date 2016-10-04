@@ -35,14 +35,14 @@ shinyServer(function(input, output) {
   output$dn1 <- downloadHandler(
     filename = paste("pigplan_yearly.csv"),
     content = function(file) {
-      write.csv(tbl1, file)
+      write.csv(tbl1, file, row.names = FALSE)
     }
   )
 
   output$dn2 <- downloadHandler(
     filename = paste("pigplan_monthly.csv"),
     content = function(file) {
-      write.csv(tbl2, file)
+      write.csv(tbl2, file, row.names = FALSE)
     }
   )
 
